@@ -323,4 +323,5 @@ Full details, including the exact commands run and their output, are in
 - **Puzzles page is empty / 404s**: run `npm run seed` in `server/`.
 #   C o d o r a  
  #   C o d o r a  
+ #   O p e n c h e s s  
  
