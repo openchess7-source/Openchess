@@ -1,0 +1,88 @@
+/* ============================================================
+   OPENCHESS DESIGN TOKENS
+   Single accent color per spec §6 (Deep Blue). Do not introduce
+   additional accent hues — reuse --accent for all primary states.
+   ============================================================ */
+
+:root,
+[data-theme='light'] {
+  --bg: #FAFAF9;
+  --surface: #FFFFFF;
+  --surface-alt: #F0EFEB;
+  --line: #E4E2DD;
+
+  --ink: #14171A;
+  --ink-soft: #5B6570;
+  --ink-faint: #9AA2AB;
+
+  --accent: #1A73E8;
+  --accent-dark: #1558B0;
+  --accent-tint: rgba(26, 115, 232, 0.12);
+
+  --info: #4A90D9;
+  --info-tint: rgba(74, 144, 217, 0.12);
+
+  --win: #1E9E6B;
+  --win-tint: rgba(30, 158, 107, 0.14);
+  --loss: #E5484D;
+  --loss-tint: rgba(229, 72, 77, 0.14);
+  --draw: #8B96A8;
+  --draw-tint: rgba(139, 150, 168, 0.16);
+  --warning: #C77A12;
+  --warning-tint: rgba(199, 122, 18, 0.14);
+
+  /* Board palette is intentionally independent of the UI accent (spec §13). */
+  --sq-light: #EAF2FD;
+  --sq-dark: #1A3A5C;
+  --sq-select: rgba(26, 115, 232, 0.38);
+  --sq-last: rgba(74, 144, 217, 0.30);
+  --sq-check: rgba(229, 72, 77, 0.45);
+}
+
+[data-theme='dark'] {
+  --bg: #0B0C0E;
+  --surface: #141518;
+  --surface-alt: #1B1D21;
+  --line: #26282D;
+
+  --ink: #F5F4F2;
+  --ink-soft: #9BA3AD;
+  --ink-faint: #656C76;
+
+  --accent: #3B8CF0;
+  --accent-dark: #1A73E8;
+  --accent-tint: rgba(59, 140, 240, 0.16);
+
+  --info: #4A90D9;
+  --info-tint: rgba(74, 144, 217, 0.16);
+
+  --win: #2FBE85;
+  --win-tint: rgba(47, 190, 133, 0.16);
+  --loss: #F0666B;
+  --loss-tint: rgba(240, 102, 107, 0.16);
+  --draw: #8B96A8;
+  --draw-tint: rgba(139, 150, 168, 0.18);
+  --warning: #E0A23B;
+  --warning-tint: rgba(224, 162, 59, 0.16);
+
+  --sq-light: #C7D6E8;
+  --sq-dark: #142C46;
+  --sq-select: rgba(59, 140, 240, 0.4);
+  --sq-last: rgba(74, 144, 217, 0.32);
+  --sq-check: rgba(240, 102, 107, 0.5);
+}
+
+/* Density: 'comfortable' (default) vs 'compact' — toggled in Appearance settings */
+[data-density='compact'] {
+  --row-py: 8px;
+}
+[data-density='comfortable'],
+:root {
+  --row-py: 13px;
+}
+
+/* Reduced motion respected globally */
+[data-reduced-motion='true'] * {
+  animation-duration: 0.001ms !important;
+  transition-duration: 0.001ms !important;
+}
